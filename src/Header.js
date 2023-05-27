@@ -7,11 +7,11 @@ function Header() {
 
   useEffect(() => {
     if (window.ethereum) {
-      checkIfWalletIsConnected(web3);
+      checkIfWalletIsConnected();
     } else {
       alert('Please install MetaMask!');
     }
-  }, []);
+  }, [checkIfWalletIsConnected]);
 
   const checkIfWalletIsConnected = async () => {
     const accounts = await web3.eth.getAccounts();
