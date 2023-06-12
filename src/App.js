@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import './App.css';
+import logo from './logo.svg'; // Assuming the logo file is at the same level
 
 function App() {
   const [account, setAccount] = useState('');
@@ -42,7 +43,7 @@ function App() {
     } else {
       alert('Please install MetaMask!');
     }
-  };  
+  };
 
   return (
     <div className="App">
@@ -57,7 +58,30 @@ function App() {
         )}
       </div>
       <div className="main">
-        <h1>Welcome to Our ICO</h1>
+        <h1>Welcome to BoomToken ICO</h1>
+        <img src={logo} alt="Token Icon" className="token-icon" />
+        <div className="info-container">
+          <div className="presale-container rounded-rect">
+            <div className="presale-boomtoken">
+              <h3 className="green-text">Presale</h3>
+              <h2>BoomToken <img src={logo} alt="Token Icon Small" className="token-icon-small" /></h2>
+            </div>
+            <button className="metamask-button">Add to MetaMask</button>
+            <ol className="buy-instructions">
+              <li>Install MetaMask.</li>
+              <li>Connect your wallet.</li>
+              <li>Enter the amount of BNB you want to spend.</li>
+              <li>Click on the "Buy" button.</li>
+            </ol>
+          </div>
+          <div className="purchase-container rounded-rect">
+            <label for="amount" className="input-label">AmountBNB</label>
+            <input id="amount" type="text" placeholder="0.00" className="amount-input" />
+            <label for="price" className="input-label">Token Price:</label>
+            <input id="price" type="text" value="$1" readOnly className="token-price" />
+            <button className="buy-button">Buy</button>
+          </div>
+        </div>
       </div>
     </div>
   );

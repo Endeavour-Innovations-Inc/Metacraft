@@ -7,6 +7,16 @@
   pointer-events: none;
 }
 
+.token-icon {
+  width: 50px; /* change as needed */
+  height: 50px; /* change as needed */
+}
+
+.token-icon-small {
+  width: 30px; /* change as needed */
+  height: 30px; /* change as needed */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -70,5 +80,128 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.green-text {
+  color: green;
+}
+
+.rounded-rect {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.presale-container h2 {
+  display: flex;
+  align-items: left;
+}
+
+.presale-container h3 {
+  font-size: smaller;
+}
+
+.buy-instructions {
+  list-style-position: inside;
+}
+
+.presale-boomtoken {
+  text-align: left;
+}
+
+.presale-container {
+  width: 45%; /* Adjust the value as per your need */
+  margin-left: 0;
+}
+
+.presale-container h3, .presale-container h2 {
+  margin-left: 0;
+  text-align: left;
+}
+
+.rounded-rect {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.presale-container h2 {
+  display: flex;
+  align-items: center;
+}
+
+.presale-container h3 {
+  font-size: smaller;
+}
+
+.buy-instructions {
+  list-style-position: inside;
+  text-align: left;
+}
+
+.token-price-container {
+  text-align: right;
+  align-items: left;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.presale-container,
+.purchase-container {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 10px;
+  height: auto;
+}
+
+.presale-container {
+  margin-right: 10px;
+  width: 60%;
+}
+
+.purchase-container {
+  margin-left: 10px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-label {
+  align-self: flex-start;
+}
+
+.amount-input,
+.token-price,
+.buy-button {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.buy-button {
+  text-align: center;
+}
+
+/* When the screen is 600px wide or less, stack the containers vertically */
+@media (max-width: 600px) {
+  .info-container {
+    flex-direction: column; /* Stacks the containers vertically */
+  }
+
+  .presale-container,
+  .purchase-container {
+    flex: none; /* Lets the containers take up as much space as they need */
+    width: 100%; /* Makes the containers as wide as the parent */
+    margin: 10px 0; /* Gives each container a little space on the top and bottom */
   }
 }
