@@ -62,12 +62,15 @@ function App() {
         <img src={logo} alt="Token Icon" className="token-icon" />
         <div className="info-container">
           <div className="presale-container rounded-rect">
-            <div className="presale-boomtoken">
+          <div className="presale-boomtoken">
+            <div className="token-details">
               <h3 className="green-text">Presale</h3>
               <h2>BoomToken <img src={logo} alt="Token Icon Small" className="token-icon-small" /></h2>
             </div>
             <button className="metamask-button">Add to MetaMask</button>
+          </div>
             <ol className="buy-instructions">
+              <p>Instructions:</p>
               <li>Install MetaMask.</li>
               <li>Connect your wallet.</li>
               <li>Enter the amount of BNB you want to spend.</li>

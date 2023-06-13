@@ -1,3 +1,16 @@
+:root {
+  --button-padding: 10px;
+  --button-margin: 10px;
+  --button-font-size: 18px;
+  --button-border-radius: 5px;
+  --button-cursor: pointer;
+  --button-transition: 0.3s;
+  --button-color: #fff;
+  --border-radius: 5px;
+  --container-padding: 20px;
+  --container-margin: 10px;
+}
+
 .App {
   text-align: center;
 }
@@ -8,13 +21,13 @@
 }
 
 .token-icon {
-  width: 50px; /* change as needed */
-  height: 50px; /* change as needed */
+  width: 50px;
+  height: 50px;
 }
 
 .token-icon-small {
-  width: 30px; /* change as needed */
-  height: 30px; /* change as needed */
+  width: 30px;
+  height: 30px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -37,16 +50,19 @@
   margin: 0;
 }
 
-.languageButton {
-  padding: 10px;
-  margin: 10px;
-  font-size: 18px;
-  background-color: #2200bc;
-  color: #fff;
+.languageButton, .connectButton {
+  padding: var(--button-padding);
+  margin: var(--button-margin);
+  font-size: var(--button-font-size);
+  color: var(--button-color);
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+  border-radius: var(--button-border-radius);
+  cursor: var(--button-cursor);
+  transition: var(--button-transition);
+}
+
+.languageButton {
+  background-color: #2200bc;
 }
 
 .languageButton:hover {
@@ -55,15 +71,7 @@
 }
 
 .connectButton {
-  padding: 10px;
-  margin: 10px;
-  font-size: 18px;
   background-color: rgb(189, 179, 1);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
 .connectButton:hover {
@@ -87,11 +95,9 @@
   color: green;
 }
 
-.rounded-rect {
-  border: 1px solid #000;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
+.presale-container h2, .presale-container h3 {
+  text-align: left;
+  margin-left: 0;
 }
 
 .presale-container h2 {
@@ -103,48 +109,35 @@
   font-size: smaller;
 }
 
-.buy-instructions {
-  list-style-position: inside;
+.rounded-rect {
+  border: 1px solid #000;
+  border-radius: var(--border-radius);
+  padding: var(--container-padding);
+  margin: var(--container-margin);
 }
 
-.presale-boomtoken {
+.buy-instructions {
+  list-style-position: inside;
   text-align: left;
+  margin-left: 0;
+}
+
+.presale-boomtoken, .token-price-container {
+  text-align: left;
+}
+
+.presale-boomtoken .green-text {
+  margin-bottom: 0; /* Remove margin at the bottom */
+}
+
+.presale-boomtoken h2 {
+  margin-top: 0; /* Remove margin at the top */
+  margin-bottom: 0;
 }
 
 .presale-container {
-  width: 45%; /* Adjust the value as per your need */
+  width: 45%;
   margin-left: 0;
-}
-
-.presale-container h3, .presale-container h2 {
-  margin-left: 0;
-  text-align: left;
-}
-
-.rounded-rect {
-  border: 1px solid #000;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
-}
-
-.presale-container h2 {
-  display: flex;
-  align-items: center;
-}
-
-.presale-container h3 {
-  font-size: smaller;
-}
-
-.buy-instructions {
-  list-style-position: inside;
-  text-align: left;
-}
-
-.token-price-container {
-  text-align: right;
-  align-items: left;
 }
 
 .info-container {
@@ -192,16 +185,25 @@
   text-align: center;
 }
 
-/* When the screen is 600px wide or less, stack the containers vertically */
+.token-details {
+  text-align: left;
+}
+
+.metamask-button {
+  margin-top: 0;
+  align-self: flex-start;
+  margin-left: 0;
+}
+
 @media (max-width: 600px) {
   .info-container {
-    flex-direction: column; /* Stacks the containers vertically */
+    flex-direction: column; 
   }
 
   .presale-container,
   .purchase-container {
-    flex: none; /* Lets the containers take up as much space as they need */
-    width: 100%; /* Makes the containers as wide as the parent */
-    margin: 10px 0; /* Gives each container a little space on the top and bottom */
+    flex: none; 
+    width: 100%; 
+    margin: 10px 0; 
   }
 }
