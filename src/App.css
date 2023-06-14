@@ -120,6 +120,7 @@
   list-style-position: inside;
   text-align: left;
   margin-left: 0;
+  margin-bottom: 0;
 }
 
 .presale-boomtoken, .token-price-container {
@@ -193,6 +194,10 @@
   margin-top: 0;
   align-self: flex-start;
   margin-left: 0;
+}
+
+.instructions-container {
+  width: 100%;
 }
 
 @media (max-width: 600px) {
