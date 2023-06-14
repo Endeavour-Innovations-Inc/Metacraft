@@ -78,10 +78,14 @@ function App() {
             </ol>
           </div>
           <div className="purchase-container rounded-rect">
-            <label for="amount" className="input-label">AmountBNB</label>
-            <input id="amount" type="text" placeholder="0.00" className="amount-input" />
-            <label for="price" className="input-label">Token Price:</label>
-            <input id="price" type="text" value="$1" readOnly className="token-price" />
+            <div className="input-group">
+              <label htmlFor="amount" className="input-label">AmountBNB</label>
+              <input id="amount" type="text" placeholder="0.00" className="amount-input" />
+            </div>
+            <div className="input-group">
+              <label htmlFor="price" className="input-label">Token Price</label>
+              <input id="price" type="text" value="$1" readOnly className="token-price" />
+            </div>
             <button className="buy-button">Buy</button>
           </div>
         </div>

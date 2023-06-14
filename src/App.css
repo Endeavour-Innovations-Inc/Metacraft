@@ -172,12 +172,16 @@
 }
 
 .input-label {
-  align-self: flex-start;
+  display: block;
+  text-align: left;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .amount-input,
 .token-price,
 .buy-button {
+  display: block;
   width: 100%;
   margin-top: 5px;
 }
@@ -212,6 +216,11 @@
 
 .instructions-container p {
   margin-bottom: 0px; /* Adjust this value to your preference */
+}
+
+.input-group {
+  align-items: flex-start;
+  margin-bottom: 20px; 
 }
 
 @media (max-width: 600px) {
