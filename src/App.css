@@ -200,6 +200,20 @@
   width: 100%;
 }
 
+.buy-instructions {
+  padding-left: 0;
+  list-style: none;
+}
+
+.buy-instructions li:not(:first-child) {
+  margin-left: 1em;
+  list-style-type: decimal;
+}
+
+.instructions-container p {
+  margin-bottom: 0px; /* Adjust this value to your preference */
+}
+
 @media (max-width: 600px) {
   .info-container {
     flex-direction: column; 

@@ -62,24 +62,20 @@ function App() {
         <img src={logo} alt="Token Icon" className="token-icon" />
         <div className="info-container">
           <div className="presale-container rounded-rect">
-            <div className="presale-boomtoken">
-              <div className="token-details">
-                <h3 className="green-text">Presale</h3>
-                <h2>BoomToken <img src={logo} alt="Token Icon Small" className="token-icon-small" /></h2>
-              </div>
-              <div>
-                <button className="metamask-button">Add to MetaMask</button>
-                <div className="instructions-container">
-                  <p>Instructions:</p>
-                  <ol className="buy-instructions">
-                    <li>Install MetaMask.</li>
-                    <li>Connect your wallet.</li>
-                    <li>Enter the amount of BNB you want to spend.</li>
-                    <li>Click on the "Buy" button.</li>
-                  </ol>
-                </div>
-              </div>
+          <div className="presale-boomtoken">
+            <div className="token-details">
+              <h3 className="green-text">Presale</h3>
+              <h2>BoomToken <img src={logo} alt="Token Icon Small" className="token-icon-small" /></h2>
             </div>
+            <button className="metamask-button">Add to MetaMask</button>
+          </div>
+            <ol className="buy-instructions">
+              <p><strong>Instructions</strong></p>
+              <li>Install MetaMask.</li>
+              <li>Connect your wallet.</li>
+              <li>Enter the amount of BNB you want to spend.</li>
+              <li>Click on the "Buy" button.</li>
+            </ol>
           </div>
           <div className="purchase-container rounded-rect">
             <label for="amount" className="input-label">AmountBNB</label>
@@ -91,7 +87,7 @@ function App() {
         </div>
       </div>
     </div>
-  );  
+  );
 }
 
 export default App;
