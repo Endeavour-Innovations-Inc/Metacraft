@@ -182,12 +182,14 @@
 .token-price,
 .buy-button {
   display: block;
-  width: 100%;
+  width: 97%;
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .buy-button {
   text-align: center;
+  width: 100%;
 }
 
 .token-details {
@@ -220,7 +222,7 @@
 
 .input-group {
   align-items: flex-start;
-  margin-bottom: 20px; 
+  margin-bottom: 10px; 
 }
 
 @media (max-width: 600px) {
