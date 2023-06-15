@@ -52,7 +52,9 @@ function App() {
           {language === 'English' ? 'РУС' : 'ENG'}
         </button>
         {account ? (
-          <p className="accountInfo">Connected with the account: {account}</p>
+          <button className="connectButton">
+            Connected: {account.substring(0,6)}...{account.substring(account.length - 4)}
+          </button>
         ) : (
           <button onClick={connectWallet} className="connectButton">Connect to MetaMask</button>
         )}
