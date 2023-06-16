@@ -15,6 +15,7 @@ const translations = {
     buyNowInstruction: "Press the 'Buy Now' button to purchase tokens",
     amount: "AmountBNB",
     price: "Token Price",
+    nTokens: "Token Quantity for Purchase",
     connected: "Connected: ",
     connectMetamask: "Connect to MetaMask",
     presale: "Presale",
@@ -30,6 +31,7 @@ const translations = {
     buyNowInstruction: "Нажмите кнопку 'Купить сейчас' чтобы приобрести токены",
     amount: "Количество BNB",
     price: "Цена токена",
+    nTokens: "Количество токенов для покупки",
     connected: "Подключено: ",
     connectMetamask: "Подключиться к MetaMask",
     presale: "Предварительная продажа",
@@ -138,6 +140,22 @@ function App() {
             id="price" 
             type="text" 
             value="$1" 
+            readOnly 
+            className="token-price" 
+            style={{
+              padding: "10px",
+              border: "1px solid #03680a",
+              backgroundColor: "#f3eac2",
+              color: "#03680a"
+            }}
+          />
+        </div>
+        <div className="input-group">
+          <label htmlFor="price" className="input-label">{t.nTokens}</label>
+          <input 
+            id="price" 
+            type="text" 
+            value="10" 
             readOnly 
             className="token-price" 
             style={{
