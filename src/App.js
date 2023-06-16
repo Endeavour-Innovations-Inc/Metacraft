@@ -95,7 +95,7 @@ function App() {
         )}
       </div>
       <div className="main">
-        <h1>{t.welcome}</h1>
+      <h1 className="dark-text">{t.welcome}</h1>
         <img src={logo} alt="Token Icon" className="token-icon" />
         <div className="info-container">
           <div className="presale-container rounded-rect">

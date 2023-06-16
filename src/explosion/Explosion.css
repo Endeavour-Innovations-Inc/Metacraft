@@ -1,8 +1,9 @@
 .explosion {
     position: fixed;
     border-radius: 50%;
-    background: #ff0;
+    background: #dd9506;
     animation: explosion 2s forwards;
+    z-index: 1; /* Lower z-index */
   }
   
   @keyframes explosion {
