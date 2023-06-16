@@ -12,6 +12,7 @@ const translations = {
     connect: "Connect your wallet.",
     enterAmount: "Enter the amount of BNB you want to spend.",
     buyNow: "Buy Now",
+    buyNowInstruction: "Press the 'Buy Now' button to purchase tokens",
     amount: "AmountBNB",
     price: "Token Price",
     connected: "Connected: ",
@@ -26,6 +27,7 @@ const translations = {
     connect: "Подключите ваш кошелек.",
     enterAmount: "Введите сумму BNB, которую вы хотите потратить.",
     buyNow: "Купить Сейчас",
+    buyNowInstruction: "Нажмите кнопку 'Купить сейчас' чтобы приобрести токены",
     amount: "Количество BNB",
     price: "Цена токена",
     connected: "Подключено: ",
@@ -96,7 +98,7 @@ function App() {
       </div>
       <div className="main">
       <h1 className="dark-text">{t.welcome}</h1>
-        <img src={logo} alt="Token Icon" className="token-icon" />
+        {/* <img src={logo} alt="Token Icon" className="token-icon" /> */}
         <div className="info-container">
           <div className="presale-container rounded-rect">
             <div className="presale-boomtoken">
@@ -111,18 +113,41 @@ function App() {
               <li>{t.install}</li>
               <li>{t.connect}</li>
               <li>{t.enterAmount}</li>
-              <li>{t.buyNow}</li>
+              <li>{t.buyNowInstruction}</li>
             </ol>
           </div>
           <div className="purchase-container rounded-rect">
-            <div className="input-group">
-              <label htmlFor="amount" className="input-label">{t.amount}</label>
-              <input id="amount" type="text" placeholder="0.00" className="amount-input" />
-            </div>
-            <div className="input-group">
-              <label htmlFor="price" className="input-label">{t.price}</label>
-              <input id="price" type="text" value="$1" readOnly className="token-price" />
-            </div>
+          <div className="input-group">
+          <label htmlFor="amount" className="input-label">{t.amount}</label>
+          <input 
+            id="amount" 
+            type="text" 
+            placeholder="0.00" 
+            className="amount-input" 
+            style={{
+              padding: "10px",
+              border: "1px solid #03680a",
+              backgroundColor: "#f3eac2",
+              color: "#03680a"
+            }}
+          />
+        </div>
+        <div className="input-group">
+          <label htmlFor="price" className="input-label">{t.price}</label>
+          <input 
+            id="price" 
+            type="text" 
+            value="$1" 
+            readOnly 
+            className="token-price" 
+            style={{
+              padding: "10px",
+              border: "1px solid #03680a",
+              backgroundColor: "#f3eac2",
+              color: "#03680a"
+            }}
+          />
+        </div>
             <button className="buy-button">{t.buyNow}</button>
           </div>
         </div>

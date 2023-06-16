@@ -68,6 +68,7 @@ body, html {
   padding: 0 20px;
   border-bottom: 1px solid #000000;
   background-color: #03680a;
+  z-index: 3; /* Higher z-index */
 }
 
 .accountInfo {
@@ -217,16 +218,30 @@ body, html {
 .buy-button {
   text-align: center;
   width: 100%;
+  padding: 8px; /* Adjust as needed */
+  border-radius: 15px; /* Adjust as needed */
+  background-color: #f3eac2; /* Dark green */
+  color: #03680a; /* Light cream */
 }
 
 .token-details {
   text-align: left;
 }
 
+.token-details h2{
+  text-align: left;
+  margin-bottom: 8px;
+}
+
 .metamask-button {
   margin-top: 0;
   align-self: flex-start;
   margin-left: 0;
+  width: 60%;
+  padding: 8px; /* Adjust as needed */
+  border-radius: 15px; /* Adjust as needed */
+  background-color: #f3eac2; /* Dark green */
+  color: #03680a; /* Light cream */
 }
 
 .instructions-container {
@@ -250,6 +265,8 @@ body, html {
 .input-group {
   align-items: flex-start;
   margin-bottom: 10px; 
+  width: 95%;
+  border-radius: 15px; /* Adjust as needed */
 }
 
 @media (max-width: 600px) {
