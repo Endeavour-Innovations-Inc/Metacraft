@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import './App.css';
 import logo from './logo.svg';
+import Explosion from './explosion/Explosion'; // import the Explosion component
 
 const translations = {
   English: {
@@ -80,6 +81,7 @@ function App() {
 
   return (
     <div className="App">
+      <Explosion /> {/* use the Explosion component */}
       <div className="header">
         <button onClick={switchLanguage} className="languageButton">
           {language === 'English' ? 'РУС' : 'ENG'}
@@ -97,13 +99,13 @@ function App() {
         <img src={logo} alt="Token Icon" className="token-icon" />
         <div className="info-container">
           <div className="presale-container rounded-rect">
-          <div className="presale-boomtoken">
-            <div className="token-details">
-              <h3 className="green-text">{t.presale}</h3>
-              <h2>BoomToken <img src={logo} alt="Token Icon Small" className="token-icon-small" /></h2>
+            <div className="presale-boomtoken">
+              <div className="token-details">
+                <h3 className="green-text">{t.presale}</h3>
+                <h2>BoomToken <img src={logo} alt="Token Icon Small" className="token-icon-small" /></h2>
+              </div>
+              <button className="metamask-button">{t.addToMetamask}</button>
             </div>
-            <button className="metamask-button">{t.addToMetamask}</button>
-          </div>
             <ol className="buy-instructions">
               <p><strong>{t.instructions}</strong></p>
               <li>{t.install}</li>
@@ -126,7 +128,7 @@ function App() {
         </div>
       </div>
     </div>
-  );
+  );  
 }
 
 export default App;
