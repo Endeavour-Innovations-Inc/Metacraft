@@ -60,8 +60,9 @@ function App() {
     if (window.ethereum) {
       checkIfWalletIsConnected();
     } else {
-      alert(t.install);
+      alert(t('install'));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language]);
 
   const connectWallet = async () => {
