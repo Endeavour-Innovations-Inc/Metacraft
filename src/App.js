@@ -1,13 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import './App.css';
-import logo from './logo.svg'; // Assuming the logo file is at the same level
+import logo from './logo.svg';
+
+const translations = {
+  English: {
+    welcome: "Welcome to BoomToken ICO",
+    instructions: "Instructions",
+    install: "Install MetaMask.",
+    connect: "Connect your wallet.",
+    enterAmount: "Enter the amount of BNB you want to spend.",
+    buyNow: "Buy Now",
+    amount: "AmountBNB",
+    price: "Token Price",
+    connected: "Connected: ",
+    connectMetamask: "Connect to MetaMask",
+    presale: "Presale",
+    addToMetamask: "Add to MetaMask"
+  },
+  Russian: {
+    welcome: "Добро пожаловать в ICO BoomToken",
+    instructions: "Инструкции",
+    install: "Установите MetaMask.",
+    connect: "Подключите ваш кошелек.",
+    enterAmount: "Введите сумму BNB, которую вы хотите потратить.",
+    buyNow: "Купить Сейчас",
+    amount: "Количество BNB",
+    price: "Цена токена",
+    connected: "Подключено: ",
+    connectMetamask: "Подключиться к MetaMask",
+    presale: "Предварительная продажа",
+    addToMetamask: "Добавить в MetaMask"
+  }
+};
 
 function App() {
   const [account, setAccount] = useState('');
   const [language, setLanguage] = useState('English');
 
-  // Code to switch language
+  const t = translations[language];
+
   const switchLanguage = () => {
     if (language === 'English') {
       setLanguage('Russian');
@@ -28,9 +60,9 @@ function App() {
     if (window.ethereum) {
       checkIfWalletIsConnected();
     } else {
-      alert('Please install MetaMask!');
+      alert(t.install);
     }
-  }, []);
+  }, [language]);
 
   const connectWallet = async () => {
     if (window.ethereum) {
@@ -41,7 +73,7 @@ function App() {
         console.error('Failed to connect to MetaMask');
       }
     } else {
-      alert('Please install MetaMask!');
+      alert(t.install);
     }
   };
 
@@ -53,42 +85,42 @@ function App() {
         </button>
         {account ? (
           <button className="connectButton">
-            Connected: {account.substring(0,6)}...{account.substring(account.length - 4)}
+            {t.connected}{account.substring(0,6)}...{account.substring(account.length - 4)}
           </button>
         ) : (
-          <button onClick={connectWallet} className="connectButton">Connect to MetaMask</button>
+          <button onClick={connectWallet} className="connectButton">{t.connectMetamask}</button>
         )}
       </div>
       <div className="main">
-        <h1>Welcome to BoomToken ICO</h1>
+        <h1>{t.welcome}</h1>
         <img src={logo} alt="Token Icon" className="token-icon" />
         <div className="info-container">
           <div className="presale-container rounded-rect">
           <div className="presale-boomtoken">
             <div className="token-details">
-              <h3 className="green-text">Presale</h3>
+              <h3 className="green-text">{t.presale}</h3>
               <h2>BoomToken <img src={logo} alt="Token Icon Small" className="token-icon-small" /></h2>
             </div>
-            <button className="metamask-button">Add to MetaMask</button>
+            <button className="metamask-button">{t.addToMetamask}</button>
           </div>
             <ol className="buy-instructions">
-              <p><strong>Instructions</strong></p>
-              <li>Install MetaMask.</li>
-              <li>Connect your wallet.</li>
-              <li>Enter the amount of BNB you want to spend.</li>
-              <li>Click on the "Buy" button.</li>
+              <p><strong>{t.instructions}</strong></p>
+              <li>{t.install}</li>
+              <li>{t.connect}</li>
+              <li>{t.enterAmount}</li>
+              <li>{t.buyNow}</li>
             </ol>
           </div>
           <div className="purchase-container rounded-rect">
             <div className="input-group">
-              <label htmlFor="amount" className="input-label">AmountBNB</label>
+              <label htmlFor="amount" className="input-label">{t.amount}</label>
               <input id="amount" type="text" placeholder="0.00" className="amount-input" />
             </div>
             <div className="input-group">
-              <label htmlFor="price" className="input-label">Token Price</label>
+              <label htmlFor="price" className="input-label">{t.price}</label>
               <input id="price" type="text" value="$1" readOnly className="token-price" />
             </div>
-            <button className="buy-button">Buy</button>
+            <button className="buy-button">{t.buyNow}</button>
           </div>
         </div>
       </div>
