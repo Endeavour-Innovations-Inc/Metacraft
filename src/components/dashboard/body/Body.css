@@ -1,0 +1,186 @@
+/* Body.css */
+
+.dark-text {
+    color: #4B4B4B; /* or #4B4B4B for charcoal */
+  }
+  
+  .token-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .token-icon-small {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .green-text {
+    color: rgb(255, 255, 255);
+  }
+  
+  .presale-container h2, .presale-container h3 {
+    text-align: left;
+    margin-left: 0;
+  }
+  
+  .presale-container h2 {
+    display: flex;
+    align-items: left;
+  }
+  
+  .presale-container h3 {
+    font-size: smaller;
+  }
+  
+  .rounded-rect {
+    border: 1px solid #000;
+    border-radius: var(--border-radius);
+    padding: var(--container-padding);
+    margin: var(--container-margin);
+  }
+  
+  .buy-instructions {
+    list-style-position: inside;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  
+  .presale-boomtoken, .token-price-container {
+    text-align: left;
+  }
+  
+  .presale-boomtoken .green-text {
+    margin-bottom: 0; /* Remove margin at the bottom */
+  }
+  
+  .presale-boomtoken h2 {
+    margin-top: 0; /* Remove margin at the top */
+    margin-bottom: 0;
+  }
+  
+  .presale-container {
+    width: 45%;
+    margin-left: 0;
+  }
+  
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  .presale-container,
+  .purchase-container {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    border-radius: 10px;
+    height: auto;
+    position: relative; /* Needed for z-index to take effect */
+    z-index: 2; /* Higher z-index */
+    background-color: #03680a; /* Dark green background */
+  }
+  
+  .presale-container {
+    margin-right: 10px;
+    width: 60%;
+  }
+  
+  .purchase-container {
+    margin-left: 10px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .input-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .amount-input,
+  .token-price,
+  .buy-button {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #03680a;
+    background-color: #f3eac2;
+    color: #03680a;
+  }
+  
+  .buy-button {
+    text-align: center;
+    width: 100%;
+    padding: 8px; /* Adjust as needed */
+    border-radius: 15px; /* Adjust as needed */
+    background-color: #f3eac2; /* Dark green */
+    color: #03680a; /* Light cream */
+  }
+  
+  .token-details {
+    text-align: left;
+  }
+  
+  .token-details h2{
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  
+  .metamask-button {
+    margin-top: 0;
+    align-self: flex-start;
+    margin-left: 0;
+    width: 60%;
+    padding: 8px; /* Adjust as needed */
+    border-radius: 15px; /* Adjust as needed */
+    background-color: #f3eac2; /* Dark green */
+    color: #03680a; /* Light cream */
+  }
+  
+  .instructions-container {
+    width: 100%;
+  }
+  
+  .buy-instructions {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .buy-instructions li:not(:first-child) {
+    margin-left: 1em;
+    list-style-type: decimal;
+  }
+  
+  .instructions-container p {
+    margin-bottom: 0px; /* Adjust this value to your preference */
+  }
+  
+  .input-group {
+    align-items: flex-start;
+    margin-bottom: 10px; 
+    width: 95%;
+    border-radius: 15px; /* Adjust as needed */
+  }
+  
+  @media (max-width: 600px) {
+    .info-container {
+      flex-direction: column; 
+    }
+  
+    .presale-container,
+    .purchase-container {
+      flex: none; 
+      width: 100%; 
+      margin: 10px 0; 
+    }
+  }
+  
