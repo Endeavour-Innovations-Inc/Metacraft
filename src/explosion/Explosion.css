@@ -1,5 +1,5 @@
 .explosion {
-    position: fixed;
+    position: absolute;
     border-radius: 50%;
     background: #dd9506;
     animation: explosion 2s forwards;

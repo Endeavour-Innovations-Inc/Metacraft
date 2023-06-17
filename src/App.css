@@ -210,9 +210,13 @@ body, html {
 .token-price,
 .buy-button {
   display: block;
-  width: 97%;
+  width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #03680a;
+  background-color: #f3eac2;
+  color: #03680a;
 }
 
 .buy-button {

@@ -85,8 +85,8 @@ function App() {
 
   return (
     <div className="App">
-      <Explosion /> {/* use the Explosion component */}
-      <div className="header">
+      <Explosion className="explosion"/>
+      <div className="header" style={{position: "relative", zIndex: "2"}}>
         <button onClick={switchLanguage} className="languageButton">
           {language === 'English' ? 'РУС' : 'ENG'}
         </button>
@@ -99,8 +99,7 @@ function App() {
         )}
       </div>
       <div className="main">
-      <h1 className="dark-text">{t.welcome}</h1>
-        {/* <img src={logo} alt="Token Icon" className="token-icon" /> */}
+        <h1 className="dark-text">{t.welcome}</h1>
         <div className="info-container">
           <div className="presale-container rounded-rect">
             <div className="presale-boomtoken">
@@ -119,59 +118,24 @@ function App() {
             </ol>
           </div>
           <div className="purchase-container rounded-rect">
-          <div className="input-group">
-          <label htmlFor="amount" className="input-label">{t.amount}</label>
-          <input 
-            id="amount" 
-            type="text" 
-            placeholder="0.00" 
-            className="amount-input" 
-            style={{
-              padding: "10px",
-              border: "1px solid #03680a",
-              backgroundColor: "#f3eac2",
-              color: "#03680a"
-            }}
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="price" className="input-label">{t.price}</label>
-          <input 
-            id="price" 
-            type="text" 
-            value="$1" 
-            readOnly 
-            className="token-price" 
-            style={{
-              padding: "10px",
-              border: "1px solid #03680a",
-              backgroundColor: "#f3eac2",
-              color: "#03680a"
-            }}
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="price" className="input-label">{t.nTokens}</label>
-          <input 
-            id="price" 
-            type="text" 
-            value="10" 
-            readOnly 
-            className="token-price" 
-            style={{
-              padding: "10px",
-              border: "1px solid #03680a",
-              backgroundColor: "#f3eac2",
-              color: "#03680a"
-            }}
-          />
-        </div>
+            <div className="input-group">
+              <label htmlFor="amount" className="input-label">{t.amount}</label>
+              <input id="amount" type="text" placeholder="0.00" className="amount-input" />
+            </div>
+            <div className="input-group">
+              <label htmlFor="price" className="input-label">{t.price}</label>
+              <input id="price" type="text" value="$1" readOnly className="token-price" />
+            </div>
+            <div className="input-group">
+              <label htmlFor="nTokens" className="input-label">{t.nTokens}</label>
+              <input id="nTokens" type="text" value="10" readOnly className="token-price" />
+            </div>
             <button className="buy-button">{t.buyNow}</button>
           </div>
         </div>
       </div>
     </div>
-  );  
+  );    
 }
 
 export default App;
