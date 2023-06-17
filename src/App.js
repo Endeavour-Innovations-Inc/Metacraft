@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import './App.css';
 import logo from './logo.svg';
-import Explosion from './explosion/Explosion'; // import the Explosion component
+import Explosion from './components/effects/explosion/Explosion'; // import the Explosion component
 
 const translations = {
   English: {
