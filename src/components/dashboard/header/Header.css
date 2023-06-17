@@ -1,0 +1,55 @@
+/* Header.css */
+:root {
+    --button-padding: 10px;
+    --button-margin: 10px;
+    --button-font-size: 18px;
+    --button-border-radius: 5px;
+    --button-cursor: pointer;
+    --button-transition: 0.3s;
+    --button-color: #fff;
+    --border-radius: 5px;
+  }
+  
+  .header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    padding: 0 20px;
+    border-bottom: 1px solid #000000;
+    background-color: #03680a;
+    z-index: 3;
+  }
+  
+  .accountInfo {
+    margin: 0;
+  }
+  
+  .languageButton, .connectButton {
+    padding: var(--button-padding);
+    margin: var(--button-margin);
+    font-size: var(--button-font-size);
+    color: var(--button-color);
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: var(--button-cursor);
+    transition: var(--button-transition);
+  }
+  
+  .languageButton {
+    background-color: #04930e;
+  }
+  
+  .languageButton:hover {
+    background-color: #f1d625;
+    color: #000;
+  }
+  
+  .connectButton {
+    background-color: #04930e;
+  }
+  
+  .connectButton:hover {
+    background-color: rgb(203, 165, 10);
+  }
+  
