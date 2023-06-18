@@ -12,7 +12,7 @@ const translations = {
   }
 };
 
-const Header = ({ language, switchLanguage, account, setAccount }) => {
+const Header = ({ language, account, setAccount }) => {
   const t = translations[language];
 
   useEffect(() => {
@@ -27,8 +27,7 @@ const Header = ({ language, switchLanguage, account, setAccount }) => {
     if (window.ethereum) {
       checkIfWalletIsConnected();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [language]);
+  }, [setAccount]); // Included setAccount in the dependencies
 
   const connectWallet = async () => {
     if (window.ethereum) {
@@ -45,9 +44,11 @@ const Header = ({ language, switchLanguage, account, setAccount }) => {
 
   return (
     <div className="header" style={{position: "relative", zIndex: "2"}}>
-      <button onClick={switchLanguage} className="languageButton">
-        {language === 'English' ? 'РУС' : 'ENG'}
-      </button>
+      <button className="menuButton">Trade</button>
+      <button className="menuButton">Earn</button>
+      <button className="menuButton">Dashboard</button>
+      <button className="menuButton">ITO</button>
+      
       {account ? (
         <button className="connectButton">
           {t.connected}{account.substring(0,6)}...{account.substring(account.length - 4)}

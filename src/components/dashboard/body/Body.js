@@ -1,6 +1,7 @@
 import React from 'react';
 import './Body.css';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import myLogo from './mylogo.png';
 
 const Body = ({ t }) => {
   return (
@@ -11,7 +12,7 @@ const Body = ({ t }) => {
           <div className="presale-boomtoken">
             <div className="token-details">
               <h3 className="green-text">{t.presale}</h3>
-              <h2>VierTrust <img src={logo} alt="Token Icon Small" className="token-icon-small" /></h2>
+              <h2>VierTrust<img src={myLogo} alt="Token Icon Small" className="token-icon-small" /></h2>
             </div>
             <button className="metamask-button">{t.addToMetamask}</button>
           </div>

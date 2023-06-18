@@ -12,13 +12,18 @@ body, html {
 }
 
 .App {
+  background: url(/public/woof.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: #f3eac2; /* cream yellow */
   min-height: 100vh;
   position: relative;
   text-align: center;
-  background: linear-gradient(270deg, #fffdd0, #f3eac2);
-  background-size: 200% 200%;
-  animation: animatedBackground 10s linear infinite;
+  /* background: linear-gradient(270deg, #fffdd0, #f3eac2); */
+  /* background-size: 200% 200%; */
+  /* animation: animatedBackground 10s linear infinite; */
 }
 
 @keyframes animatedBackground {

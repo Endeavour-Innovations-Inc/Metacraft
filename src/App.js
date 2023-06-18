@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import './components/dashboard/body/Body.css';
-import Explosion from './components/effects/explosion/Explosion'; // import the Explosion component
+// import Explosion from './components/effects/explosion/Explosion'; // import the Explosion component
 import Header from './components/dashboard/header/Header';
 import Body from './components/dashboard/body/Body';
 import Footer from './components/dashboard/footer/Footer';
@@ -53,10 +53,10 @@ function App() {
 
   return (
     <div className="App">
-      <Explosion className="explosion"/>
-      <Header language={language} switchLanguage={switchLanguage} account={account} setAccount={setAccount} />
+      {/* <Explosion className="explosion"/> */}
+      <Header language={language} account={account} setAccount={setAccount} />
       <Body t={t} />
-      <Footer /> 
+      <Footer language={language} switchLanguage={switchLanguage} /> 
     </div>
   );
 }

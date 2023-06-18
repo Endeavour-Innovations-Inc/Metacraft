@@ -10,12 +10,14 @@
   }
   
   .token-icon-small {
+    margin-left: 10px;  /* Adjust as needed */
     width: 30px;
     height: 30px;
   }
   
   .green-text {
     color: rgb(255, 255, 255);
+    padding-bottom: 10px;  /* Adjust as needed */
   }
   
   .presale-container h2, .presale-container h3 {
