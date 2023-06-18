@@ -4,10 +4,11 @@ import './components/dashboard/body/Body.css';
 import Explosion from './components/effects/explosion/Explosion'; // import the Explosion component
 import Header from './components/dashboard/header/Header';
 import Body from './components/dashboard/body/Body';
+import Footer from './components/dashboard/footer/Footer';
 
 const translations = {
   English: {
-    welcome: "Welcome to BoomToken ICO",
+    welcome: "Welcome to VierTrust ICO",
     instructions: "Instructions",
     install: "Install MetaMask.",
     connect: "Connect your wallet.",
@@ -21,7 +22,7 @@ const translations = {
     addToMetamask: "Add to MetaMask"
   },
   Russian: {
-    welcome: "Добро пожаловать в ICO BoomToken",
+    welcome: "Добро пожаловать в VierTrust ICO",
     instructions: "Инструкции",
     install: "Установите MetaMask.",
     connect: "Подключите ваш кошелек.",
@@ -55,6 +56,7 @@ function App() {
       <Explosion className="explosion"/>
       <Header language={language} switchLanguage={switchLanguage} account={account} setAccount={setAccount} />
       <Body t={t} />
+      <Footer /> 
     </div>
   );
 }

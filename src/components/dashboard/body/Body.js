@@ -11,7 +11,7 @@ const Body = ({ t }) => {
           <div className="presale-boomtoken">
             <div className="token-details">
               <h3 className="green-text">{t.presale}</h3>
-              <h2>BoomToken <img src={logo} alt="Token Icon Small" className="token-icon-small" /></h2>
+              <h2>VierTrust <img src={logo} alt="Token Icon Small" className="token-icon-small" /></h2>
             </div>
             <button className="metamask-button">{t.addToMetamask}</button>
           </div>

@@ -1,6 +1,7 @@
 /* App.css */
 @import './components/dashboard/header/Header.css';
 @import './components/dashboard/body/Body.css';
+@import './components/dashboard/footer/Footer.css';
 
 body, html {
   height: 100%;
